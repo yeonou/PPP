@@ -46,15 +46,32 @@ $(function(){
         event.preventDefault();
         if($(this).attr('class') == 'active'){
             $(this).removeClass('active');
+            
             $('#border').addClass('active').fadeOut(1000);
-			$('#footer').addClass('active').fadeOut(1000);
+			$('footer').addClass('active').fadeOut(1000);
 			$(this).find('span').removeClass('btn_g');			
         }else{
             $(this).addClass('active');
+            
             $('#border').removeClass('active').fadeIn(1000);
-			$('#footer').removeClass('active').fadeIn(1000);
+			$('footer').removeClass('active').fadeIn(1000);
 			$(this).find('span').addClass('btn_g');			
         }
     });
     
+    /* Form Select */
+    
+   var selectVal 
+    $('select').on('change', function(){        
+        var selectVal = $(this).find("option[value='" + $(this).val() + "']").text()
+        console.log(selectVal);
+        $(this).next('p').text(selectVal);
+        console.log($(this).next('p'));
+        /*console.log($('#budget option:selected').text());*/
+    });
+    
+   
+    /*$('#budget').on('change', function(){
+        console.log($(this).find("option[value='" + $(this).val() + "']").text());
+    });*/
 });
