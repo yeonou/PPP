@@ -9,7 +9,32 @@
 	<script src="js/html5div.js"></script>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/prefixfree.min.js"></script>
-	<script src="js/common.js"></script>	
+	<script src="js/common.js"></script>
+	
+	<script type="text/javascript">
+    $(function(){
+        
+        $(window).scroll(function(){
+            
+            var indexHeight = $('.index_wrap').height();
+            var scrollTopNum = $(window).scrollTop();
+            
+            if(scrollTopNum < indexHeight){
+                $('#toggle_btn').find('div').removeClass();
+                $('#toggle_btn').find('div').addClass('btn_w');
+                $('.title').removeClass('color_b').addClass('color_w');
+                
+               
+            }else if(scrollTopNum > indexHeight){                
+                $('#toggle_btn').find('div').removeClass();
+                $('#toggle_btn').find('div').addClass('btn_b');
+                
+                $('.title').removeClass('color_w').addClass('color_b');
+            }
+        });
+        
+    });
+</script>	
 </head>
 
 <body>
@@ -117,6 +142,7 @@
 		<!-- class="about_box3" -->
 	</div>
 	<!-- class="about_wrap" -->
+	
 </body>
 
 </html>

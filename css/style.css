@@ -272,7 +272,9 @@ footer{ position:fixed; top:810px; width:100vw; height:148px; z-index:101; displ
 .title.color_b {
     color:#222;
 }
-
+.title.color_w {
+    color:#fff;
+}
 
 /* MAIN Section */
 
@@ -521,7 +523,7 @@ footer{ position:fixed; top:810px; width:100vw; height:148px; z-index:101; displ
 /* 라인 */
 .about_sh_line{position:absolute; top:60.5%; left:-236px; width:260px; height:2px; background-color:#d63232; }
 /* 어바웃박스2 */
-.about_box2{ position:absolute; top:1016px; left:100px; width:1230px; height:819px; background:url(../images/ABOUT_service.png) no-repeat; z-index: 200; }
+.about_box2{ position:absolute; top:1016px; left:100px; width:1230px; height:819px; background:url(../images/ABOUT_service.png) no-repeat; z-index: 10; }
 /* 텍스트박스 */
 .about_box2 .txt_box{ width:383px; height:819px; position:absolute; right:0; background: rgba(0,0,0,0.4);  }
 .about_box2 .txt_box > h3{font-family:'Maven Pro', sans-serif; font-size:3.5em; color:#fdfbfb; font-weight:900; text-align:center; margin:220px 0 100px; }
